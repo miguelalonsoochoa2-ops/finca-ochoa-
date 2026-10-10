@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PLANTILLA: reemplaza https://example.com/finca-ochoa/ por la URL pública real antes de publicar -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/finca-ochoa/</loc></url>
+  <url><loc>https://example.com/finca-ochoa/page/productos.html</loc></url>
+  <url><loc>https://example.com/finca-ochoa/page/nosotros.html</loc></url>
+  <url><loc>https://example.com/finca-ochoa/page/contacto.html</loc></url>
+  <url><loc>https://example.com/finca-ochoa/page/mapa-sitio.html</loc></url>
+</urlset>

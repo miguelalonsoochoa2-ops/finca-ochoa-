@@ -1,0 +1,26 @@
+ENTREGA EP2 - FINCA OCHOA
+
+PARA ABRIR
+1. Extrae el ZIP completo en una carpeta.
+2. Abre index.html para recorrer el sitio.
+3. Abre informe-ep2.html para leer el informe y usar el enlace al producto.
+
+ARCHIVOS PRINCIPALES
+- index.html: página de inicio.
+- page/productos.html: seis variedades y tabla comparativa.
+- page/nosotros.html: historia y proceso.
+- page/contacto.html: WhatsApp y mapa referencial de Lunahuaná.
+- page/mapa-sitio.html: enlaces organizados a todas las páginas.
+- informe-ep2.html: informe académico en HTML, con enlace local al sitio y al PDF.
+- Informe_EP2_Finca_Ochoa.pdf: versión PDF del mismo informe.
+- sitemap.xml: plantilla para completar después de publicar.
+- dist/css/site.css: estilos básicos, comentados en español y adaptables.
+- dist/imagenes/: logotipo y fotografías locales de los productos.
+
+IMPORTANTE
+- No copies únicamente index.html: mantén las carpetas page y dist junto a él para que carguen los estilos y las imágenes.
+- Las fotografías de las botellas son archivos locales. Las miniaturas de YouTube, el mapa y WhatsApp necesitan conexión a internet.
+- Las miniaturas abren el video en YouTube; no son reproductores incrustados.
+- El sitemap.xml contiene un dominio de ejemplo. Sustitúyelo en cada línea por la URL real después de publicar.
+- La URL pública aún está pendiente. Publica la carpeta completa en un hosting estático antes de compartir un enlace por internet.
+- Confirma precios, datos comerciales, número de contacto y dirección exacta con Finca Ochoa antes de usar el sitio como canal de venta.
