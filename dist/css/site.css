@@ -1,0 +1,283 @@
+/* Colores y medidas que se repiten en todo el sitio */
+:root {
+  --vino: #4b1822;
+  --vino-claro: #6b2936;
+  --dorado: #d2aa70;
+  --crema: #fbf7f0;
+  --blanco: #fffdf9;
+  --texto: #302927;
+  --gris: #706863;
+  --borde: #e8ddd1;
+}
+
+/* Ajustes generales para que el contenido sea fácil de leer */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+img, iframe { max-width: 100%; }
+img { display: block; height: auto; }
+a { color: var(--vino-claro); }
+a:hover { color: var(--vino); }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--dorado);
+  outline-offset: 3px;
+}
+h1, h2, h3 {
+  color: var(--vino);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.2;
+}
+.container, .header-inner, .footer-inner {
+  width: calc(100% - 32px);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.container { padding: 48px 0; }
+.muted, .form-note { color: var(--gris); }
+.eyebrow {
+  margin: 0 0 8px;
+  color: #9a713e;
+  font-size: .78rem;
+  font-weight: bold;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+/* Enlace de acceso rápido, encabezado y menú */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 12px;
+  z-index: 5;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: var(--blanco);
+}
+.skip-link:focus { top: 12px; }
+.site-header { background: var(--vino); color: var(--blanco); }
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+}
+.brand-mark {
+  width: 72px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: white;
+}
+.brand-mark img { width: 100%; height: 100%; object-fit: contain; }
+.brand-copy { display: grid; }
+.brand-name {
+  color: white;
+  font: bold 1.35rem Georgia, "Times New Roman", serif;
+}
+.brand-tagline { color: #f1dcb9; font-size: .82rem; }
+.site-nav ul, .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.site-nav a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+}
+.site-nav a:hover, .site-nav a[aria-current="page"] { background: var(--vino-claro); }
+
+/* Portada y botones principales */
+.hero, .page-hero {
+  background: linear-gradient(120deg, #32121b, var(--vino-claro));
+  color: white;
+}
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  align-items: center;
+  gap: 32px;
+  min-height: 390px;
+}
+.hero h1, .page-heading h1 { color: white; }
+.hero h1 { max-width: 15ch; margin: 0; font-size: 3.5rem; }
+.hero-copy { max-width: 58ch; color: #f5e8dc; font-size: 1.08rem; }
+.hero-note { color: #f1dcb9; font-weight: bold; }
+.hero-product { margin: 0; text-align: center; }
+.hero-product img {
+  width: 100%;
+  max-width: 270px;
+  max-height: 320px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.hero-product figcaption { color: #f1dcb9; }
+.hero-actions, .action-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 2px solid var(--dorado);
+  border-radius: 24px;
+  background: var(--dorado);
+  color: #32121b;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+.button:hover { background: #e3c493; color: #32121b; }
+.button--light { border-color: white; background: transparent; color: white; }
+.button--light:hover { background: rgba(255,255,255,.12); color: white; }
+.button--small { padding: 8px 13px; font-size: .92rem; }
+.page-heading { max-width: 780px; padding-top: 40px; padding-bottom: 40px; }
+.page-heading h1 { margin: 0; font-size: 2.8rem; }
+.page-heading p { color: #f5e8dc; }
+
+/* Tarjetas, productos, datos rápidos e imágenes */
+.trust-strip, .product-grid, .video-grid, .criteria-grid { display: flex; flex-wrap: wrap; }
+.trust-item {
+  flex: 1 1 200px;
+  padding: 18px 12px;
+  border-right: 1px solid var(--borde);
+  background: var(--blanco);
+  text-align: center;
+}
+.trust-item strong { display: block; color: var(--vino); font: bold 1.2rem Georgia, serif; }
+.trust-item span { color: var(--gris); font-size: .9rem; }
+.section-heading { max-width: 700px; margin: 0 auto 28px; text-align: center; }
+.section-heading h2, .page-heading h1 { margin-bottom: 8px; }
+.section-heading p { color: var(--gris); }
+.product-grid, .video-grid, .criteria-grid { gap: 18px; }
+.product-card, .video-card, .content-card, .contact-card, .report-card, .feature-panel {
+  overflow: hidden;
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  background: var(--blanco);
+  box-shadow: 0 8px 22px rgba(53, 21, 28, .07);
+}
+.product-card { display: flex; flex: 1 1 280px; flex-direction: column; }
+.product-card__image {
+  display: grid;
+  min-height: 230px;
+  place-items: center;
+  background: linear-gradient(#f5eadb, #fffaf3);
+}
+.product-card__image img { width: 100%; height: 230px; padding: 10px; object-fit: contain; }
+.product-card__body { display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 18px; }
+.product-card h2, .product-card h3 { margin: 0; font-size: 1.3rem; }
+.product-card p { color: var(--gris); }
+.product-meta { display: flex; flex-wrap: wrap; gap: 8px 14px; color: var(--vino) !important; font-size: .92rem; font-weight: bold; }
+.product-card .button { margin-top: auto; }
+.feature-grid, .split-layout, .contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 24px;
+}
+.feature-panel, .content-card, .contact-card, .report-card { padding: 24px; }
+.feature-panel h2, .content-card h2, .contact-card h2, .report-card h2 { margin-top: 0; }
+.bottle-panel {
+  display: grid;
+  min-height: 360px;
+  place-items: center;
+  border-radius: 16px;
+  background: #f3e7d8;
+}
+.bottle-panel img { max-height: 350px; object-fit: contain; }
+.process-list { display: grid; gap: 12px; padding-left: 24px; }
+.process-list li { padding: 12px; border-left: 3px solid var(--dorado); background: #f6efe6; }
+.faq-list { display: grid; gap: 10px; max-width: 850px; margin: 0 auto; }
+.faq-list details { padding: 15px; border: 1px solid var(--borde); border-radius: 10px; background: white; }
+.faq-list summary { color: var(--vino); font-weight: bold; cursor: pointer; }
+.faq-list details p { margin-bottom: 0; color: var(--gris); }
+
+/* Miniaturas de videos: al tocar una, se abre YouTube */
+.video-card { flex: 1 1 280px; padding-bottom: 8px; }
+.video-thumb {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: var(--vino);
+}
+.video-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 5px 14px;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background: #d9222a;
+  color: white;
+  font-size: 1.3rem;
+}
+.video-card h3, .video-card p { margin: 12px 16px; }
+.video-card p { color: var(--gris); }
+
+/* Tabla de vinos, contacto y mapa */
+.table-wrap { overflow-x: auto; border: 1px solid var(--borde); border-radius: 12px; background: white; }
+.wine-table { width: 100%; min-width: 560px; border-collapse: collapse; }
+.wine-table caption { padding: 14px; color: var(--vino); font-weight: bold; text-align: left; }
+.wine-table th, .wine-table td { padding: 12px 14px; border-top: 1px solid var(--borde); text-align: left; }
+.wine-table thead { background: var(--vino); color: white; }
+.wine-table tbody tr:nth-child(even) { background: #f8f1e8; }
+.form-card { padding: 24px; border: 1px solid var(--borde); border-radius: 16px; background: white; }
+.contact-details { display: grid; gap: 12px; margin: 0; }
+.contact-details div { padding-bottom: 10px; border-bottom: 1px solid var(--borde); }
+.contact-details dt { color: var(--vino); font-weight: bold; }
+.contact-details dd { margin: 4px 0 0; }
+.map-link { display: block; margin: 16px 0; font-weight: bold; }
+.map-frame { width: 100%; height: 300px; border: 0; border-radius: 12px; }
+
+/* Informe, mapa del sitio y pie de página */
+.report-lead { max-width: 75ch; color: var(--gris); font-size: 1.05rem; }
+.report-actions { margin: 22px 0 32px; }
+.report-stack { display: grid; gap: 18px; }
+.report-card h2 { margin-bottom: 8px; font-size: 1.5rem; }
+.report-card h3 { margin-bottom: 6px; }
+.criteria-item { flex: 1 1 260px; padding: 16px; border: 1px solid var(--borde); border-radius: 12px; background: #fffaf3; }
+.criteria-item h3 { margin-top: 0; color: var(--vino); font-family: Arial, sans-serif; }
+.sitemap, .sitemap ul { display: grid; gap: 8px; padding-left: 20px; }
+.sitemap > li { padding: 10px; border-left: 3px solid var(--dorado); background: #f8f1e8; list-style: none; }
+.notice { padding: 14px; border-left: 4px solid var(--dorado); background: #f8f1e8; }
+.site-footer { background: #32121b; color: #f5e8dc; }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding: 22px 0; }
+.footer-inner p { margin: 0; font-size: .9rem; }
+.footer-links a { color: #f1dcb9; }
+
+/* Un solo ajuste responsive para tabletas y celulares */
+@media (max-width: 760px) {
+  .header-inner { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .hero-inner, .feature-grid, .split-layout, .contact-layout { grid-template-columns: 1fr; }
+  .hero-inner { min-height: 0; padding-top: 38px; padding-bottom: 32px; }
+  .hero h1 { font-size: 2.5rem; }
+  .page-heading h1 { font-size: 2.2rem; }
+  .hero-product img { max-height: 250px; }
+  .container { padding-top: 36px; padding-bottom: 36px; }
+}
